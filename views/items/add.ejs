@@ -1,0 +1,30 @@
+<%include ../layout/header %>
+
+<div style="font-size: 30px;color: blue;">
+    Add new item:
+</div>
+<form action="/items/add" method="post">
+    <table style="margin ">
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="name" value="" placeholder="item name" required></td>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td><input type="text" name="Id" value="" placeholder="item ID" required></td>
+        </tr>
+        <tr>
+            <td>product</td>
+            <td>
+                <select  style="width:192px" name="product">
+                    <% items.forEach(function(item){%>
+                    <option value="<%=item.name%>"><%=item.name%></option>
+                    <%})%>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="ADD"></td>
+        </tr>
+    </table>
+</form>

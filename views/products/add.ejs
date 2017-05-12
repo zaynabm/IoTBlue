@@ -1,0 +1,28 @@
+<%include ../layout/header %>
+
+<div style="font-size: 30px;color: blue;">
+    Add new product:
+</div>
+<form action="/products/add" method="post">
+    <table style="margin ">
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="name" value="" placeholder="product name" required></td>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td><input type="text" name="Id" value="" placeholder="product ID" required></td>
+        </tr>
+        <tr>
+            <td>Company</td>
+            <td><input type="text" name="company" value="" placeholder="product company" required></td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td><input type="text" name="desc" value="" placeholder="product description" required></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="ADD"></td>
+        </tr>
+    </table>
+</form>

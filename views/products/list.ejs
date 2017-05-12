@@ -1,0 +1,44 @@
+<%include ../layout/header %>
+<h1>Products: </h1>
+<div style="background-color:#9aafe0;border-radius: 8px;text-align:center;padding: 5px;margin: 5px; width:450px">
+    <a href="/products/add" style="text-decoration:none"> Add new product</a>
+</div>
+<form class="" action="/products/show/" method="post">
+    <table>
+        <tr>
+            <td>Search Product</td> <td><input type="text" name="IDToSearch" value="" placeholder="product's ID to search" required></td><td><input type="submit" value="search"></td>
+        </tr>
+    </table>
+</form>
+
+<table >
+    <tr>
+        <th>Name</th>
+        <th>ID</th>
+        <th>company</th>
+        <th>description</th>
+    </tr>
+    <% products.forEach(function(product){%>
+        <tr>
+            <td><%=product.name%> </td>
+            <td><%=product.Id%></td>
+            <td><%=product.company%> </td>
+            <td><%=product.description%></td>
+            <td><a href="/products/delete/<%=product.Id%>">Delete</a></td>
+            <td><a href="/products/edit/<%=product.Id%>">Edit</a></td>
+        </tr>
+    <%})%>
+</table>
+
+
+
+<style media="screen">
+    td{
+        padding: 10px;
+        background-color:#c0cdea
+    }
+    th{
+        padding: 10px;
+        background-color: #899bc4
+    }
+</style>

@@ -1,0 +1,26 @@
+<%include ../layout/header %>
+
+<h3> Product <%=product.name%> </h3>
+<form action="/products/add" method="post">
+    <table style="margin ">
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="name" value="<%=product.name%>" placeholder="product name" required></td>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td><input type="text" name="Id" value="<%=product.Id%>" placeholder="product ID" required></td>
+        </tr>
+        <tr>
+            <td>Company</td>
+            <td><input type="text" name="company" value="<%=product.company%>" placeholder="product company" required></td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td><input type="text" name="desc" value="<%=product.description%>" placeholder="product description" required></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Done"></td>
+        </tr>
+    </table>
+</form>
